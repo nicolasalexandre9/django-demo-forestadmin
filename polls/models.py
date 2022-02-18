@@ -39,7 +39,7 @@ class Range(models.Model):
 class Book(models.Model):
     DifficultyChoices = models.TextChoices('DifficultyChoices', 'easy hard')
     label = models.CharField(max_length=200)
-    comment = models.TextField()
+    summary = models.TextField()
     difficulty = models.CharField(blank=True, choices=DifficultyChoices.choices, max_length=10)
     amount = models.FloatField()
     active = models.BooleanField(default=True)
